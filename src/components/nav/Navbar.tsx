@@ -4,11 +4,10 @@ import Toggler from './Toggler'
 export default function Navbar() {
   return (
     <>
-      <div className='rounded-xl shadow-lg fixed lg:mt-2 p-4 lg:mx-56 mt-1 z-10 top-0 left-0 right-0 backdrop-blur-sm '>
+      <div className='rounded-xl shadow-lg fixed lg:mt-2 p-4 lg:mx-56 mt-1 z-10 top-0 left-0 right-0 backdrop-blur-sm dark:bg-[#111112]/30'>
         <div className='flex justify-between items-center text-center'>
           <Link className='lg:text-md p-2' href='/'>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
               width='30'
               height='30'
               fill='none'
@@ -16,7 +15,6 @@ export default function Navbar() {
               strokeLinecap='round'
               strokeLinejoin='round'
               strokeWidth='1.5'
-              className='icon icon-tabler icon-tabler-terminal-2 text-black'
               viewBox='0 0 24 24'>
               <path stroke='none' d='M0 0h24v24H0z' />
               <path d='M8 9l3 3-3 3' />
@@ -38,3 +36,5 @@ export default function Navbar() {
     </>
   )
 }
+// #1b1b1f
+// #161618

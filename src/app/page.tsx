@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
-import { proyectos } from '@/components/const/const'
+import { Github, Linkedin } from 'lucide-react'
+
 import {
   IconReact,
   IconTailw,
@@ -9,9 +10,10 @@ import {
   IconRedux,
   IconNext,
   IconNode,
-  IconJ,
-  IconGithub
+  IconJ
 } from '@/components/icons/icons'
+import { Button } from '@/components/ui/button'
+import Proyects from '@/components/proyects'
 
 const tech = {
   react: <IconReact />,
@@ -27,7 +29,7 @@ const tech = {
 export default function Home() {
   return (
     <main>
-      <section className='md:my-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center bg-secondary mt-20'>
+      <section className='md:my-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center mt-20'>
         <div className='md:flex-1 md:mr-20 mt-5 lg:mt-0'>
           <p className=' font-mada text-lg lg:text-2xl text-purple-700 dark:text-purple-500'>
             Hello there! 👋 I am
@@ -46,41 +48,31 @@ export default function Home() {
 
           <div className='flex lg:flex-row flex-col lg:mt-2 gap-5 text-center items-center '>
             <div className='flex gap-2 '>
-              <a
-                href='https://github.com/aledx18'
-                className=' flex items-center rounded-lg pr-2 shadow-lg hover:bg-black/30 '>
-                <IconGithub w='45' h='40' f='#fff' />
-                Github
-              </a>
-              <a
-                href='https://www.linkedin.com/in/alejandrodíaz-dev'
-                target='_blank'
-                className=' flex items-center rounded-lg pr-2 shadow-lg hover:bg-black/30'
-                rel='noreferrer'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='36'
-                  height='40'
-                  viewBox='7.025 7.025 497.951 497.95'
-                  className='m-1'>
-                  <linearGradient
-                    id='a'
-                    x1='-974.482'
-                    x2='-622.378'
-                    y1='1306.773'
-                    y2='1658.877'
-                    gradientTransform='translate(1054.43 -1226.825)'
-                    gradientUnits='userSpaceOnUse'>
-                    <stop offset='0' stopColor='#2489be' />
-                    <stop offset='1' stopColor='#0575b3' />
-                  </linearGradient>
-                  <path
-                    fill='#2187bd'
-                    d='M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z'
+              <Button asChild variant='personal' size='lg'>
+                <a
+                  href='https://github.com/aledx18'
+                  target='_blank'
+                  rel='noreferrer'>
+                  <Github className='mr-2 dark:text-white' size={32} />
+
+                  <p className='dark:text-white text-black text-lg'>GitHub</p>
+                </a>
+              </Button>
+
+              <Button asChild variant='personal' size='lg'>
+                <a
+                  href='https://www.linkedin.com/in/alejandrodíaz-dev'
+                  target='_blank'
+                  rel='noreferrer'>
+                  <Linkedin
+                    className='mr-2 dark:text-white text-primary'
+                    size={32}
+                    strokeWidth={1.4}
                   />
-                </svg>
-                Linkedin
-              </a>
+
+                  <p className='dark:text-white text-black text-lg'>Linkedin</p>
+                </a>
+              </Button>
             </div>
 
             <div className='relative group max-w-7xl'>
@@ -157,83 +149,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className='body-font'>
-        <div className='mt-16 lg:mt-24'>
-          <div className='flex items-center text-center gap-2 justify-center md:justify-normal'>
-            <h1 className='font-primary font-bold text-2xl lg:text-3xl p-0 my-6 '>
-              Projects 🚀
-            </h1>
-          </div>
-        </div>
-        <div className='flex flex-wrap gap-20 py-16 justify-center md:justify-normal'>
-          {proyectos.map((item) => (
-            <div
-              key={item.id}
-              className='block rounded-lg p-4 shadow-sm shadow-purple-800'>
-              <a href={item.src} target='_blank' rel='noreferrer'>
-                <img
-                  alt='Home'
-                  src={item.srcImage}
-                  className='h-72 w-full rounded-md object-cover transition-all duration-500 hover:scale-105'
-                />
-              </a>
-
-              <div className='mt-4'>
-                <dl>
-                  <div>
-                    <dt className='sr-only'>Title</dt>
-
-                    <dd className='font-medium text-lg'>
-                      {item.title} {item.icon}{' '}
-                    </dd>
-                  </div>
-                </dl>
-                <div className='mt-2 flex items-center gap-8 text-xs'>
-                  <a
-                    href={item.src}
-                    target='_blank'
-                    className='inline-flex p-2 sm:shrink-0 sm:items-center sm:gap-2 rounded-md bg-[#1b1b1d]/30 hover:bg-[#1b1b1d]'
-                    rel='noreferrer'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='28'
-                      height='28'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth='2'
-                      className='icon icon-tabler icon-tabler-arrow-up-right text-purple-800'
-                      viewBox='0 0 24 24'>
-                      <path stroke='none' d='M0 0h24v24H0z' />
-                      <path d='M17 7L7 17M8 7h9v9' />
-                    </svg>
-
-                    <div className='mt-1.5 sm:mt-0'>
-                      <p className='text-gray-500'>WebPage</p>
-
-                      <p className='font-medium'>Demo</p>
-                    </div>
-                  </a>
-
-                  <a
-                    href={item.github}
-                    className='inline-flex sm:shrink-0 sm:items-center rounded-md p-2 bg-[#1b1b1d]/30 hover:bg-[#1b1b1d]'>
-                    <IconGithub w='28' h='28' f='#6b21a8' />
-
-                    <div className='mt-1.5 sm:mt-0'>
-                      <p className='text-gray-500'>Github</p>
-
-                      <p className='font-medium'>{item.githubSlug} </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Proyects />
     </main>
   )
 }

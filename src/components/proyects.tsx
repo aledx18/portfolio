@@ -38,20 +38,20 @@ export default function Proyects() {
             </CardContent>
             <CardFooter>
               <div className='flex gap-4'>
-                <Button asChild variant='personal'>
+                <Button asChild variant='personal' size='personal'>
                   <a href={item.src} target='_blank' rel='noreferrer'>
                     <ExternalLink className='mr-2 h-5 w-5 dark:text-white' />
 
                     <p className='dark:text-gray-300 text-black'>WebPage</p>
                   </a>
                 </Button>
-                <Button asChild variant='personal'>
+                <Button asChild variant='personal' size='personal'>
                   <a href={item.github} target='_blank' rel='noreferrer'>
                     <Github className='mr-2 h-5 w-5 dark:text-white' />
 
                     <p className='dark:text-gray-300 text-black'>Github</p>
 
-                    <p className='pl-1'>{item.githubSlug} </p>
+                    <p className='pl-1 hidden lg:block'>{item.githubSlug} </p>
                   </a>
                 </Button>
               </div>

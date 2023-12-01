@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main>
       <section className='flex flex-col items-center md:h-screen md:justify-center mt-28'>
-        <div className='md:my-0 flex flex-col justify-center text-center lg:text-left lg:flex-row md:justify-between md:items-center mt-10'>
+        <div className='md:my-0 flex flex-col justify-center text-center lg:text-left lg:flex-row md:justify-between md:items-center mt-6'>
           <div className='md:flex-1 md:mr-20 mt-5 lg:mt-0'>
             <p className=' font-mada text-lg lg:text-2xl text-purple-700 dark:text-purple-500'>
               Hello there! 👋 I am
@@ -38,7 +38,7 @@ export default function Home() {
             <h1 className='font-primary text-3xl lg:text-5xl font-bold mb-7'>
               Alejandro Díaz
             </h1>
-            <p className='text-lg font-Hind lg:text-lg mb-7'>
+            <p className='text-md font-Hind lg:text-lg mb-7'>
               I am a dedicated and experienced{' '}
               <span className='text-purple-500'>full-stack developer</span> with
               a focus on front-end development. I have a strong track record of
@@ -51,25 +51,24 @@ export default function Home() {
 
             <div className='flex lg:flex-row flex-col lg:mt-2 gap-5 text-center items-center '>
               <div className='flex gap-2 '>
-                <Button asChild variant='personal' size='lg'>
+                <Button asChild variant='personal' size='personal'>
                   <a
                     href='https://github.com/aledx18'
                     target='_blank'
                     rel='noreferrer'>
-                    <Github className='mr-2 dark:text-white' size={32} />
+                    <Github className='mr-2 h-8 w-8 dark:text-white' />
 
                     <p className='dark:text-white text-black text-lg'>GitHub</p>
                   </a>
                 </Button>
 
-                <Button asChild variant='personal' size='lg'>
+                <Button asChild variant='personal' size='personal'>
                   <a
                     href='https://www.linkedin.com/in/alejandrodíaz-dev'
                     target='_blank'
                     rel='noreferrer'>
                     <Linkedin
-                      className='mr-2 dark:text-white text-primary'
-                      size={32}
+                      className='mr-2 dark:text-white text-primary h-8 w-8'
                       strokeWidth={1.4}
                     />
 
@@ -80,7 +79,7 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className='relative group max-w-7xl'>
+              <div className='relative group max-w-7xl cursor-pointer'>
                 <div className='absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200' />
                 <div className='relative pr-2 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-center justify-start'>
                   <svg
@@ -148,7 +147,7 @@ export default function Home() {
         <svg viewBox='0 0 800 800' width={300} height={300}>
           <g
             strokeWidth='8'
-            stroke='hsl(0, 0%, 100%)'
+            stroke='currentColor'
             fill='none'
             strokeLinecap='round'
             strokeLinejoin='round'
@@ -171,7 +170,7 @@ export default function Home() {
                 points='0,5 5,2.5 0,0'
                 fill='none'
                 strokeWidth='1.6666666666666667'
-                stroke='hsl(0, 0%, 100%)'
+                stroke='currentColor'
                 strokeLinecap='round'
                 transform='matrix(1,0,0,1,1.6666666666666667,2.5)'
                 strokeLinejoin='round'

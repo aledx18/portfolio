@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='scroll-smooth'>
       <body className='lg:mx-60' style={poppins.style}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <Navbar />

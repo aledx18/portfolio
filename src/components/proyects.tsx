@@ -19,7 +19,7 @@ export default function Proyects() {
           </h1>
         </div>
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         {proyectos.map((item) => (
           <Card key={item.id}>
             <CardHeader>
@@ -39,19 +39,19 @@ export default function Proyects() {
             <CardFooter>
               <div className='flex gap-4'>
                 <Button asChild variant='personal'>
-                  <a href={item.github} target='_blank' rel='noreferrer'>
+                  <a href={item.src} target='_blank' rel='noreferrer'>
                     <ExternalLink className='mr-2 h-5 w-5 dark:text-white' />
 
-                    <p className='dark:text-gray-400 text-black'>WebPage</p>
+                    <p className='dark:text-gray-300 text-black'>WebPage</p>
                   </a>
                 </Button>
                 <Button asChild variant='personal'>
-                  <a href={item.src} target='_blank' rel='noreferrer'>
+                  <a href={item.github} target='_blank' rel='noreferrer'>
                     <Github className='mr-2 h-5 w-5 dark:text-white' />
 
-                    <p className='dark:text-gray-400 text-black'>Github</p>
+                    <p className='dark:text-gray-300 text-black'>Github</p>
 
-                    <p className=' pl-1'>{item.githubSlug} </p>
+                    <p className='pl-1'>{item.githubSlug} </p>
                   </a>
                 </Button>
               </div>
